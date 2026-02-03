@@ -25,8 +25,7 @@ require('mini.clue').setup({
 require('mini.pick').setup()
 
 -- set colorscheme --
-require('mini.hues').setup({background='#10191c', foreground='#acf296', n_hues = 8, saturation = 'high'})
--- vim.cmd.colorscheme('miniwinter') -- set to random preset colorscheme on nvim load
+require('mini.hues').setup({background='#1a1f26', foreground='#aaccff', n_hues = 8, saturation = 'high'})
 
 -- mini function keymaps
 local minipick = require('mini.pick')

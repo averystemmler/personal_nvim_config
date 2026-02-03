@@ -25,7 +25,7 @@ require('mini.clue').setup({
 require('mini.pick').setup()
 
 -- set colorscheme --
-require('mini.hues').setup({background='#1a1f26', foreground='#aaccff', n_hues = 8, saturation = 'high'})
+require('mini.hues').setup({background='#090a0d', foreground='#aaccff', n_hues = 8, saturation = 'high'})
 
 -- mini function keymaps
 local minipick = require('mini.pick')

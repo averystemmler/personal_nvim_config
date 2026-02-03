@@ -1,3 +1,4 @@
+
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
@@ -6,3 +7,10 @@ require('mini_config')
 require('general_keymaps')
 require('cmake_keymaps')
 require('complex_keymaps')
+
+-- lsp setup --
+vim.lsp.enable({
+    'lua_ls',
+    'clangd'
+})
+

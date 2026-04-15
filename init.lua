@@ -11,6 +11,7 @@ require('complex_keymaps')
 -- lsp setup --
 vim.lsp.enable({
     'lua_ls',
-    'clangd'
+    'clangd',
+    'basedpyright'
 })
 

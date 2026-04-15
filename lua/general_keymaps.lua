@@ -7,6 +7,7 @@ vim.keymap.set('n', '<leader>ls', '<cmd>args ./src/**/*.*<CR>', { desc = '[L]oad
 vim.keymap.set('n', '<leader>lt', '<cmd>args ./tests/**/*.*<CR>', { desc = '[L]oad all files in /[t]ests directory, recursively' })
 vim.keymap.set('n', '<leader>la', '<cmd>args ./*<CR>', { desc = '[L]oad [a]ll files in working directory, only.' })
 vim.keymap.set('n', '<leader>lc', '<cmd>args ./CMakeLists.txt<CR>', { desc = '[L]oad [C]MakeLists.txt file in main project directory.' })
+vim.keymap.set('n', '<leader>f', function() vim.lsp.buf.format { async = true } end, { desc = "Automatically [F]ormat file" })
 
 vim.keymap.set('n', '<leader>bt', '<cmd>bd! term:* | <C-a> | <CR>', { desc = 'Delete all [t]erminal buffers' })
 vim.keymap.set('n', '<leader>bd', '<cmd>bd<CR>', { desc = 'Delete current buffer' })

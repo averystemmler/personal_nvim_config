@@ -30,9 +30,8 @@ require('mini.cursorword').setup()
 -- set colorscheme --
 require('mini.hues').setup({background='#090a0d', foreground='#aaccff', n_hues = 8, saturation = 'high'})
 
-
-
 -- mini function keymaps
 local minipick = require('mini.pick')
 vim.keymap.set('n', '<leader><leader>', minipick.builtin.buffers, { desc = 'MiniPick select buffers' })
+vim.keymap.set('n', '<leader>g', minipick.builtin.grep_live, { desc = 'MiniPick grep' })
 

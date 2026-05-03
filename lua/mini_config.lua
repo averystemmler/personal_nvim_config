@@ -21,11 +21,21 @@ require('mini.clue').setup({
         { mode = { 'n', 'x' }, keys = 'g' },
     }
 })
--- TODO: set buffer picker to keymap
-require('mini.pick').setup()
-require('mini.diff').setup()
 
--- set appearance -- 
+-- git/diff --
+require('mini.diff').setup()
+vim.keymap.set('n', 'gG', function()
+    MiniDiff.toggle_overlay(0)
+end, { desc = "Toggle mini.diff overlay for the current buffer" }
+)
+-- other mini.diff functions come with default keybinds.  From the documentation:
+-- vip followed by gh / gH applies/resets hunks inside current paragraph. Same can be achieved in operator form ghip / gHip, which has the advantage of being dot-repeatable.
+-- gh_ / gH_ applies/resets current line (even if it is not a full hunk).
+-- ghgh / gHgh applies/resets hunk range under cursor.
+-- dgh deletes hunk range under cursor.
+-- [H / [h / ]h / ]H navigate cursor to the first / previous / next / last hunk range of the current buffer.
+
+-- set appearance --
 require('mini.cursorword').setup()
 -- set colorscheme --
 require('mini.hues').setup({background='#090a0d', foreground='#aaccff', n_hues = 8, saturation = 'high'})

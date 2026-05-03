@@ -40,6 +40,9 @@ require('mini.cursorword').setup()
 
 -- mini function keymaps
 local minipick = require('mini.pick')
-vim.keymap.set('n', '<leader><leader>', minipick.builtin.buffers, { desc = 'MiniPick select buffers' })
-vim.keymap.set('n', '<leader>g', minipick.builtin.grep_live, { desc = 'MiniPick grep' })
-
+vim.keymap.set(
+    'n', '<leader><leader>', minipick.builtin.buffers, { desc = 'MiniPick select buffers' }
+)
+vim.keymap.set(
+    'n', '<leader>g', minipick.builtin.grep_live, { desc = 'MiniPick [g]rep' }
+)

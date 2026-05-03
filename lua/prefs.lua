@@ -38,3 +38,7 @@ vim.o.wrap = false
 
 -- colorscheme --
 vim.cmd("colorscheme habamax")
+
+-- highlighting --
+vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>') -- clear highlights on search when pressing <Esc> in normal mode
+vim.keymap.set('n', '<C-c>', '<cmd>nohlsearch<CR>') -- disable highlighting after hitting Ctrl-C too

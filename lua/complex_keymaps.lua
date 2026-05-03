@@ -30,13 +30,9 @@ vim.keymap.set('n', '<leader>no', function()
   switchHeaderSource()
 end, { desc = '[N]ew header/s[o]urce in verticle split' })
 
-vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>') -- clear highlights on search when pressing <Esc> in normal mode
-vim.keymap.set('n', '<C-c>', '<cmd>nohlsearch<CR>') -- disable highlighting after hitting Ctrl-C too
 
 vim.keymap.set(
     'n', '<leader>q', vim.diagnostic.setloclist, { 
         desc = 'Open diagnostic [Q]uickfix list' }) -- Diagnostic keymaps
-
-
 
 

@@ -46,3 +46,7 @@ vim.keymap.set(
 vim.keymap.set(
     'n', '<leader>g', minipick.builtin.grep_live, { desc = 'MiniPick [g]rep' }
 )
+-- Non-mini colorschemes may not handle selection highlighting in mini.pick's buffer or grep selectors
+-- This should fix that, but only for colorschemes that are already loaded when these are called
+vim.api.nvim_set_hl(0, 'MiniPickMatchQuery', { link = 'IncSearch' })
+vim.api.nvim_set_hl(0, 'MiniPickMatchCurrent', { link = 'Visual' })

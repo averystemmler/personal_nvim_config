@@ -37,8 +37,6 @@ end, { desc = "Toggle mini.diff overlay for the current buffer" }
 
 -- set appearance --
 require('mini.cursorword').setup()
--- set colorscheme --
-require('mini.hues').setup({background='#090a0d', foreground='#aaccff', n_hues = 8, saturation = 'high'})
 
 -- mini function keymaps
 local minipick = require('mini.pick')

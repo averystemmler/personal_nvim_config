@@ -36,3 +36,5 @@ vim.o.shiftwidth = 4
 vim.o.expandtab = true
 vim.o.wrap = false
 
+-- colorscheme --
+vim.cmd("colorscheme habamax")

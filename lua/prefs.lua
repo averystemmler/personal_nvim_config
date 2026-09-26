@@ -42,3 +42,19 @@ vim.cmd("colorscheme habamax")
 -- highlighting --
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>') -- clear highlights on search when pressing <Esc> in normal mode
 vim.keymap.set('n', '<C-c>', '<cmd>nohlsearch<CR>') -- disable highlighting after hitting Ctrl-C too
+
+-- set txt, md files for human readability (spellcheck and text wrapping), maybe other things later
+vim.opt.spell = false
+local text_group = vim.api.nvim_create_augroup("TxtSpellCheck", { clear = true })
+vim.api.nvim_create_autocmd("FileType", {
+    group = text_group,
+    pattern = {"markdown", "text"},
+    callback = function()
+        vim.opt_local.spell = true
+        vim.opt_local.spelllang = "en_us"
+        vim.opt_local.wrap = true
+        vim.opt_local.linebreak = true
+    end,
+})
+
+
